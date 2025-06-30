@@ -6,4 +6,4 @@ My favorite password generator disappeared - so I made my own. 😃 It's availab
 
 Ideas? [Submit an issue](https://github.com/samuelT2/secure-password-generator/issues/new/choose).
 
-![App-Screenshot](https://github.com/samuelT2/secure-password-generator/blob/main/screenshot5.png "App-Screenshot")
+![App-Screenshot](https://github.com/samuelT2/sams-secure-password-generator/blob/main/assets/favicon/app.png "App-Screenshot")

@@ -27,6 +27,5 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
-          screenshot*.png
           README.md
           logo.jpg
