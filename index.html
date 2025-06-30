@@ -7,10 +7,12 @@
   <meta charset="UTF-8">
   <title> Sam's Secure Password Generator (SSPG)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Secure and easy to use passwsord generator. Generate random passwords with numbers, uppercase letters, lowercase letters, and symbols. Responsive, PWA ready and cookieless.">
-  <meta name="keywords" content="secure,password generator,pwa,random password,generate password,random,secure password,cookieless">
+  <meta name="description"
+    content="Secure and easy to use passwsord generator. Generate random passwords with numbers, uppercase letters, lowercase letters, and symbols. Responsive, PWA ready and cookieless.">
+  <meta name="keywords"
+    content="secure,password generator,pwa,random password,generate password,random,secure password,cookieless">
   <meta name="author" content="Samuel">
-  <link rel="stylesheet" type="text/css" href="css/style.css?v=1.4">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=1.5">
   <link rel="manifest" href="assets/pwa/manifest.json">
   <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
@@ -31,39 +33,43 @@
 </head>
 
 <body>
-  <h1>Sam's Secure Password Generator (SSPG)</h1>
-  <p style="text-align:center;">Everything happens on your device - nothing is logged or saved. Responsive, PWA ready and cookieless.</p>
-  <div class="form">
-    <label><input type="checkbox" id="numbers" checked> Include numbers</label>
-    <label><input type="checkbox" id="uppercases" checked> Include uppercase letters</label>
-    <label><input type="checkbox" id="lowercases" checked> Include lowercase letters</label>
-    <label><input type="checkbox" id="symbols" checked> Include symbols</label>
-    <label><input type="checkbox" id="startsWithLetter" checked> Always start with a letter</label>
-    <label>Password length (min 8, max 128): <input type="number" id="length" min="8" max="128" value="25"></label>
-    <button onclick="generatePasswords()">Generate passwords</button>
+  <div class="app">
+    <h1>Sam's Secure Password Generator (SSPG)</h1>
+    <p style="text-align:center;">Everything happens on your device - nothing is logged or saved. Responsive, PWA ready
+      and cookieless.</p>
+    <div class="form">
+      <label><input type="checkbox" id="numbers" checked> Include numbers</label>
+      <label><input type="checkbox" id="uppercases" checked> Include uppercase letters</label>
+      <label><input type="checkbox" id="lowercases" checked> Include lowercase letters</label>
+      <label><input type="checkbox" id="symbols" checked> Include symbols</label>
+      <label><input type="checkbox" id="startsWithLetter" checked> Always start with a letter</label>
+      <label>Password length (min 8, max 128): <input type="number" id="length" min="8" max="128" value="25"></label>
+      <button onclick="generatePasswords()">Generate passwords</button>
+    </div>
+    <div class="result">
+      <div class="result-row">
+        <input type="text" id="password-1" readonly>
+        <button onclick="copyToClipboard('password-1')">Copy</button>
+      </div>
+      <div class="result-row">
+        <input type="text" id="password-2" readonly>
+        <button onclick="copyToClipboard('password-2')">Copy</button>
+      </div>
+      <div class="result-row">
+        <input type="text" id="password-3" readonly>
+        <button onclick="copyToClipboard('password-3')">Copy</button>
+      </div>
+    </div>
+    <footer>
+      <p>&copy;
+        <script>document.write(new Date().getFullYear())</script> Sam's Secure Password Generator, v1.1 20250630
+      </p>
+      <p>Found a bug? Please <a href="https://github.com/samuelT2/secure-password-generator/issues/new/choose">report
+          here</a>.</p>
+      <p><a href="mailto:samuel@sspg.ch">Contact</a> | Coded and hosted in Switzerland | <a
+          href="https://github.com/samuelT2/sams-secure-password-generator" target="_blank">Github</a></p>
+    </footer>
   </div>
-  <div class="result">
-    <div class="result-row">
-      <input type="text" id="password-1" readonly>
-      <button onclick="copyToClipboard('password-1')">Copy</button>
-    </div>
-    <div class="result-row">
-      <input type="text" id="password-2" readonly>
-      <button onclick="copyToClipboard('password-2')">Copy</button>
-    </div>
-    <div class="result-row">
-      <input type="text" id="password-3" readonly>
-      <button onclick="copyToClipboard('password-3')">Copy</button>
-    </div>
-  </div>
-  <footer>
-    <p>&copy;
-      <script>document.write(new Date().getFullYear())</script> Sam's Secure Password Generator, v1.0 20250626
-    </p>
-    <p>Found a bug? Please <a href="https://github.com/samuelT2/secure-password-generator/issues/new/choose">report
-        here</a>.</p>
-    <p><a href="mailto:samuel@sspg.ch">Contact</a> | Coded and hosted in Switzerland | <a href="https://github.com/samuelT2/sams-secure-password-generator" target="_blank">Github</a></p>
-  </footer>
   <script src="js/sspg.js?v=1.7"></script>
   <script>
     if ('serviceWorker' in navigator) {
